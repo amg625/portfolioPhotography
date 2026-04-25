@@ -213,3 +213,50 @@ function showMsg(text, type) {
   formMsg.hidden = false;
   setTimeout(() => { formMsg.hidden = true; }, 5000);
 }
+
+// ── CARRUSEL DE TESTIMONIOS
+const track = document.getElementById('testimoniosTrack');
+const dotsContainer = document.getElementById('testDots');
+const cards = track ? track.querySelectorAll('.testimonio-card') : [];
+let testIdx = 0;
+let testTimer;
+
+if (cards.length > 0) {
+  // Crear dots
+  cards.forEach((_, i) => {
+    const dot = document.createElement('button');
+    dot.classList.add('test-dot');
+    dot.setAttribute('aria-label', `Testimonio ${i + 1}`);
+    if (i === 0) dot.classList.add('active');
+    dot.addEventListener('click', () => goToTest(i));
+    dotsContainer.appendChild(dot);
+  });
+
+  function goToTest(idx) {
+    testIdx = idx;
+    track.style.transform = `translateX(-${idx * 100}%)`;
+    dotsContainer.querySelectorAll('.test-dot').forEach((d, i) => {
+      d.classList.toggle('active', i === idx);
+    });
+    resetTimer();
+  }
+
+  function nextTest() {
+    goToTest((testIdx + 1) % cards.length);
+  }
+
+  function resetTimer() {
+    clearInterval(testTimer);
+    testTimer = setInterval(nextTest, 5000);
+  }
+
+  document.getElementById('testPrev').addEventListener('click', () => {
+    goToTest((testIdx - 1 + cards.length) % cards.length);
+  });
+  document.getElementById('testNext').addEventListener('click', () => {
+    goToTest((testIdx + 1) % cards.length);
+  });
+
+  // Auto avance cada 5 segundos
+  testTimer = setInterval(nextTest, 5000);
+}

@@ -5,6 +5,20 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Guillermo Alvarez — Fotografía CDMX</title>
   <meta name="description" content="Fotografía de retrato y lifestyle en CDMX. Guillermo Alvarez Fotografía. Sesiones profesionales y más." />
+      <!-- Meta tags para redes sociales -->
+      <meta property="og:title" content="Guillermo Alvarez — Fotografía CDMX" />
+      <meta property="og:description" content="Fotografía de retrato y lifestyle en CDMX. Sesiones profesionales, entrega en 3 días hábiles." />
+      <meta property="og:image" content="https://guillermoworks.com/assets/image/hero/hero_edited_2.png" />
+      <meta property="og:url" content="https://guillermoworks.com" />
+      <meta property="og:type" content="website" />
+      <meta property="og:locale" content="es_MX" />
+
+<!-- Twitter / X -->
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="Guillermo Alvarez — Fotografía CDMX" />
+<meta name="twitter:description" content="Fotografía de retrato y lifestyle en CDMX. Sesiones profesionales, entrega en 3 días hábiles." />
+<meta name="twitter:image" content="https://guillermoworks.com/assets/img/hero/hero.jpg" />
+
 
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -12,6 +26,16 @@
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=DM+Sans:wght@300;400;500&family=DM+Mono:wght@300;400&display=swap" rel="stylesheet">
   <link rel="icon" href="assets/image/icons/icono.ico">
   <link rel="stylesheet" href="assets/css/style.css" />
+
+    <!-- Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-80P47BSQ81"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-80P47BSQ81');
+  </script>
+
 </head>
 <body>
 
@@ -259,6 +283,81 @@
     </div>
   </div>
 
+
+  <!-- ═══════════════════════════════════════════
+     TESTIMONIOS
+═══════════════════════════════════════════ -->
+<section id="testimonios">
+  <div class="container">
+    <div class="section-header reveal">
+      <p class="section-label">— Testimonios</p>
+      <h2>Lo que dicen<br/><em>mis clientes</em></h2>
+    </div>
+
+    <div class="testimonios-carousel">
+      <div class="testimonios-track" id="testimoniosTrack">
+
+        <div class="testimonio-card">
+          <div class="testimonio-stars">★★★★★</div>
+          <p class="testimonio-texto">"Memo es increíble, supo capturar exactamente lo que quería. Las fotos quedaron naturales y muy profesionales. Sin duda lo recomiendo."</p>
+          <div class="testimonio-autor">
+            <div class="testimonio-iniciales">CM</div>
+            <div>
+              <span class="testimonio-nombre">Camila M.</span>
+              <span class="testimonio-servicio">Sesión de retrato</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="testimonio-card">
+          <div class="testimonio-stars">★★★★★</div>
+          <p class="testimonio-texto">"Necesitaba fotos para mi LinkedIn y quedé muy contento con el resultado. Muy profesional, puntual y con buen ojo para los ángulos."</p>
+          <div class="testimonio-autor">
+            <div class="testimonio-iniciales">AR</div>
+            <div>
+              <span class="testimonio-nombre">Andrés R.</span>
+              <span class="testimonio-servicio">Fotografía corporativa</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="testimonio-card">
+          <div class="testimonio-stars">★★★★★</div>
+          <p class="testimonio-texto">"Las fotos de nuestra sesión de pareja quedaron hermosas. Guillermo nos hizo sentir muy cómodos durante toda la sesión. ¡Volveremos!"</p>
+          <div class="testimonio-autor">
+            <div class="testimonio-iniciales">LP</div>
+            <div>
+              <span class="testimonio-nombre">Laura & Pablo</span>
+              <span class="testimonio-servicio">Sesión de pareja</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="testimonio-card">
+          <div class="testimonio-stars">★★★★★</div>
+          <p class="testimonio-texto">"Excelente trabajo, muy creativo con la iluminación. Las fotos para mi marca personal superaron mis expectativas. 100% recomendado."</p>
+          <div class="testimonio-autor">
+            <div class="testimonio-iniciales">SV</div>
+            <div>
+              <span class="testimonio-nombre">Sofía V.</span>
+              <span class="testimonio-servicio">Marca personal</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Controles -->
+      <button class="test-prev" id="testPrev" aria-label="Anterior">‹</button>
+      <button class="test-next" id="testNext" aria-label="Siguiente">›</button>
+
+      <!-- Dots -->
+      <div class="test-dots" id="testDots"></div>
+    </div>
+  </div>
+</section>
+
+
   <!-- ═══════════════════════════════════════════
        CONTACT
   ═══════════════════════════════════════════ -->
@@ -335,5 +434,17 @@
   </footer>
 
   <script src="assets/js/main.js"></script>
+
+  <!-- WhatsApp Flotante -->
+<a href="https://wa.me/5215662999954" 
+   target="_blank" 
+   rel="noopener" 
+   class="wa-float" 
+   aria-label="Contactar por WhatsApp">
+  <svg viewBox="0 0 24 24" fill="currentColor">
+    <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/>
+    <path d="M12 0C5.373 0 0 5.373 0 12c0 2.127.558 4.126 1.532 5.862L.057 23.428a.75.75 0 0 0 .916.916l5.566-1.475A11.953 11.953 0 0 0 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.891 0-3.662-.523-5.17-1.432l-.36-.216-3.862 1.023 1.023-3.747-.236-.374A9.96 9.96 0 0 1 2 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"/>
+  </svg>
+</a>
 </body>
 </html>

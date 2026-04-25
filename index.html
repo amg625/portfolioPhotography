@@ -475,6 +475,10 @@
           <label for="mensaje">Mensaje *</label>
           <textarea id="mensaje" name="mensaje" rows="4" placeholder="Cuéntame de tu proyecto..." required></textarea>
         </div>
+
+                <!-- Honeypot — invisible para humanos -->
+        <input type="text" name="website" style="display:none" tabindex="-1" autocomplete="off">
+
         <button type="submit" class="btn-primary btn-full" id="submitBtn">
           <span class="btn-text">Enviar mensaje</span>
           <span class="btn-loading" hidden>Enviando…</span>

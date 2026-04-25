@@ -118,6 +118,9 @@ document.addEventListener('keydown', e => {
   if (e.key === 'ArrowRight' && currentIdx < visibleItems.length - 1) { currentIdx++; showLbImage(currentIdx); }
 });
 
+// ── PROTECCIÓN DE IMÁGENES
+document.addEventListener('contextmenu', e => e.preventDefault());
+
 // ── SCROLL REVEAL
 const revealEls = document.querySelectorAll(
   '#about .about-grid, #services .service-card, #portfolio .portfolio-item, #contact .contact-info, #contact .contact-form, .section-header'

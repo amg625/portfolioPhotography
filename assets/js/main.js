@@ -123,7 +123,7 @@ document.addEventListener('contextmenu', e => e.preventDefault());
 
 // ── SCROLL REVEAL
 const revealEls = document.querySelectorAll(
-  '#about .about-grid, #services .service-card, #portfolio .portfolio-item, #contact .contact-info, #contact .contact-form, .section-header'
+  '#about .about-grid, #services .service-card, #portfolio .portfolio-item, #contact .contact-info, #contact .contact-form, .section-header, .paso, .paso-conector, .como-cta'
 );
 revealEls.forEach(el => el.classList.add('reveal'));
 
@@ -192,12 +192,13 @@ contactForm.addEventListener('submit', async (e) => {
       body: JSON.stringify(formData),
     });
 
-    if (res.ok) {
-      showMsg('¡Mensaje enviado! Te respondo pronto 📸', 'success');
-      contactForm.reset();
-    } else {
-      throw new Error('Server error');
-    }
+      if (res.ok) {
+        // Antes: showMsg('¡Mensaje enviado!...', 'success');
+        // Ahora: redirige a página de gracias
+        window.location.href = '/gracias.html';
+      } else {
+        throw new Error('Server error');
+      }
   } catch (err) {
     showMsg('Hubo un error. Escríbeme directamente a tu@email.com', 'error');
   } finally {

@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>¡Mensaje recibido! — Guillermo Alvarez Fotografía</title>
+  <link rel="icon" type="image/x-icon" href="assets/img/icons/favicon.ico">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=DM+Sans:wght@300;400;500&family=DM+Mono:wght@300;400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css" />
+
+  <!-- Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-80P47BSQ81"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-80P47BSQ81');
+  </script>
+
+  <style>
+    .gracias-wrap {
+      min-height: 100svh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 40px 20px;
+      background: var(--bg);
+    }
+    .gracias-card {
+      background: var(--bg2);
+      border: 1px solid var(--border-soft);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow-md);
+      padding: 64px 48px;
+      max-width: 560px;
+      width: 100%;
+      text-align: center;
+    }
+    .gracias-icon {
+      width: 72px;
+      height: 72px;
+      background: var(--teal-light);
+      border: 2px solid var(--teal);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 32px;
+    }
+    .gracias-icon svg {
+      width: 36px;
+      height: 36px;
+      stroke: var(--teal);
+    }
+    .gracias-label {
+      font-family: var(--font-mono);
+      font-size: 0.78rem;
+      letter-spacing: 0.15em;
+      color: var(--gold);
+      text-transform: uppercase;
+      margin-bottom: 16px;
+      display: block;
+    }
+    .gracias-card h1 {
+      font-size: 2.2rem;
+      margin-bottom: 16px;
+    }
+    .gracias-card p {
+      color: var(--text-muted);
+      margin-bottom: 12px;
+      font-size: 1rem;
+    }
+    .gracias-divider {
+      width: 48px;
+      height: 2px;
+      background: var(--gold);
+      margin: 28px auto;
+      border-radius: 2px;
+    }
+    .gracias-info {
+      font-family: var(--font-mono);
+      font-size: 0.78rem;
+      letter-spacing: 0.08em;
+      color: var(--text-light);
+      margin-bottom: 32px !important;
+    }
+    .gracias-btns {
+      display: flex;
+      gap: 12px;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+    .contador {
+      font-family: var(--font-mono);
+      font-size: 0.75rem;
+      color: var(--text-light);
+      margin-top: 24px;
+    }
+    .contador span { color: var(--teal); font-weight: 500; }
+  </style>
+</head>
+<body>
+
+  <!-- Nav mínimo -->
+  <nav id="navbar" class="scrolled">
+    <a href="/" class="nav-logo">
+      <img src="assets/img/logo.png" alt="Guillermo Alvarez Fotografía"
+           onerror="this.style.display='none'; this.nextElementSibling.style.display='block'" />
+      <span class="nav-logo-text" style="display:none">GA <span class="logo-gold">Fotografía</span></span>
+    </a>
+  </nav>
+
+  <div class="gracias-wrap">
+    <div class="gracias-card">
+
+      <!-- Ícono check -->
+      <div class="gracias-icon">
+        <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <polyline points="20 6 9 17 4 12"/>
+        </svg>
+      </div>
+
+      <span class="gracias-label">— Mensaje recibido</span>
+      <h1>¡Gracias por<br/><em>escribirme!</em></h1>
+      <p>Tu mensaje llegó perfectamente. Te contacto personalmente en <strong>menos de 24 hrs</strong>.</p>
+      <p>Si tienes algo urgente, escríbeme directo por WhatsApp.</p>
+
+      <div class="gracias-divider"></div>
+
+      <p class="gracias-info">📍 CDMX & Tultepec, Edomex &nbsp;·&nbsp; @clickbymemo</p>
+
+      <div class="gracias-btns">
+        <a href="/" class="btn-secondary">← Volver al inicio</a>
+        <a href="https://wa.me/5215662999954" target="_blank" class="btn-primary">WhatsApp ↗</a>
+      </div>
+
+      <p class="contador">Regresando al inicio en <span id="cuenta">10</span> segundos...</p>
+    </div>
+  </div>
+
+  <script>
+    // Contador regreso automático
+    let seg = 10;
+    const cuenta = document.getElementById('cuenta');
+    const timer = setInterval(() => {
+      seg--;
+      cuenta.textContent = seg;
+      if (seg <= 0) {
+        clearInterval(timer);
+        window.location.href = '/';
+      }
+    }, 1000);
+
+    // Nav scroll
+    document.addEventListener('scroll', () => {
+      document.getElementById('navbar')?.classList.toggle('scrolled', window.scrollY > 40);
+    });
+  </script>
+
+</body>
+</html>

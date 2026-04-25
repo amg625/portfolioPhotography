@@ -772,13 +772,13 @@ footer { background: var(--teal-dark); padding: 40px 0; }
 }
 .paso:hover .paso-icon svg { stroke: #fff; }
 
-.paso h3 {
+.paso-content h3 {
   font-size: 1.05rem;
   margin-bottom: 12px;
   color: var(--text);
 }
 
-.paso p {
+.paso-content p {
   font-size: 0.88rem;
   color: var(--text-muted);
   line-height: 1.6;
@@ -808,7 +808,7 @@ footer { background: var(--teal-dark); padding: 40px 0; }
   margin-top: 56px;
 }
 
-/* Responsive */
+/* ── Desktop: grid de 4 columnas */
 @media (min-width: 769px) {
   .pasos-grid {
     display: grid;
@@ -820,7 +820,69 @@ footer { background: var(--teal-dark); padding: 40px 0; }
     flex: none;
     width: 100%;
   }
+  .paso-conector { display: none; }
+}
+
+/* ── Móvil: columna con ícono a la izquierda */
+@media (max-width: 768px) {
+  #como-funciona { padding: 80px 0; }
+
+  .pasos-grid {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0;
+  }
+
+  .paso {
+    flex: none;
+    width: 100%;
+    padding: 28px 20px;
+    text-align: left;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 16px;
+  }
+
+  .paso-num { display: none; }
+
+  .paso-icon {
+    width: 44px;
+    height: 44px;
+    flex-shrink: 0;
+    margin: 0;
+  }
+  .paso-icon svg {
+    width: 20px;
+    height: 20px;
+  }
+
+  .paso-content { flex: 1; }
+
+  .paso-content h3 {
+    font-size: 1rem;
+    margin-bottom: 6px;
+    text-align: left;
+  }
+  .paso-content p {
+    font-size: 0.85rem;
+    text-align: left;
+  }
+
+  /* Conector vertical */
   .paso-conector {
-    display: none;
+    width: 2px;
+    height: 24px;
+    background: linear-gradient(to bottom, var(--teal), var(--gold));
+    margin-left: 38px;
+  }
+  .paso-conector::after {
+    content: '↓';
+    right: auto;
+    left: 50%;
+    top: auto;
+    bottom: -10px;
+    transform: translateX(-50%);
+    font-size: 0.9rem;
   }
 }

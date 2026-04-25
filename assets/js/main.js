@@ -145,9 +145,9 @@ document.querySelectorAll('.service-card').forEach((card, i) => {
 
 // ── FORMULARIO DE CONTACTO
 // ============================================================
-// CONFIGURA ESTO: pon la URL de tu script PHP en Hostinger
+// CONFIGURA: URL de script PHP en Hostinger
 // ============================================================
-const FORM_ENDPOINT = 'https://tudominio.com/mail.php'; // <-- cambia esto
+const FORM_ENDPOINT = 'https://guillermoworks.com/mail.php'; // 
 
 const contactForm = document.getElementById('contactForm');
 const submitBtn = document.getElementById('submitBtn');

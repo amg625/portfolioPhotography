@@ -145,7 +145,7 @@ em { font-style: italic; color: var(--teal); }
   font-size: 0.8rem;
   font-weight: 800;
   letter-spacing: 0.05em;
-  color: var(--text-muted);
+  color: #1a1a1a;
   transition: color var(--transition);
 }
 .nav-links a:hover { color: var(--teal); }
@@ -179,9 +179,9 @@ em { font-style: italic; color: var(--teal); }
   position: absolute; inset: 0;
   background: linear-gradient(
     to top,
-    rgba(0,0,0,0.75) 0%,
-    rgba(0,0,0,0.35) 30%,
-    rgba(0,0,0,0.20) 100%
+    rgba(0,0,0,0.80) 0%,
+    rgba(0,0,0,0.35) 45%,
+    rgba(0,0,0,0.10) 100%
   );
 }
 .hero-content {
@@ -193,7 +193,7 @@ em { font-style: italic; color: var(--teal); }
 .hero-label {
   font-family: var(--font-mono);
   font-size: 0.9rem;
-  font-weight: 400;
+  font-weight: 800;
   color: var(--gold);
   letter-spacing: 0.15em;
   margin-bottom: 24px;
@@ -477,8 +477,19 @@ footer { background: var(--teal-dark); padding: 40px 0; }
     border-left: 1px solid var(--border-soft); z-index: 105; box-shadow: var(--shadow-md);
   }
   .nav-links.open { transform: translateX(0); }
-  .nav-links a { font-size: 1.1rem; color: var(--text); }
-  .hero-content { padding: 0 20px 60px; }
+  .nav-links a {
+  font-size: 0.85rem;
+  font-weight: 400;
+  letter-spacing: 0.05em;
+  color: var(--text);        /* ← cambia text-muted por text */
+  transition: color var(--transition);
+}
+  .hero-content {
+  position: relative;
+  z-index: 2;
+  padding: 0 40px 120px;   /* ← sube de 80px a 120px */
+  max-width: 700px;
+}
   .hero-scroll { display: none; }
   #about { padding: 80px 0; }
   .about-grid { grid-template-columns: 1fr; gap: 40px; }

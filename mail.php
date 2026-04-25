@@ -8,7 +8,7 @@
  */
 
 header('Content-Type: application/json');
-header('Access-Control-Allow-Origin: https://tu-dominio.com'); // Cambia a tu dominio
+header('Access-Control-Allow-Origin: https://guillermoworks.com'); // header('Access-Control-Allow-Origin: https://tu-dominio.com'); // Cambia a tu dominio
 header('Access-Control-Allow-Methods: POST, OPTIONS');
 header('Access-Control-Allow-Headers: Content-Type');
 
@@ -49,10 +49,10 @@ if (!$nombre || !filter_var($email, FILTER_VALIDATE_EMAIL) || !$mensaje) {
 // OPCIÓN 1: GUARDAR EN BASE DE DATOS MySQL
 // Configura estos datos en Hostinger
 // ══════════════════════════════════════════
-$db_host = 'localhost';
-$db_name = 'tu_base_de_datos';   // <-- cambia
-$db_user = 'tu_usuario_db';      // <-- cambia
-$db_pass = 'tu_password_db';     // <-- cambia
+$db_host = '31.97.208.83';
+$db_name = 'u912746025_MainData';   // <-- cambia
+$db_user = 'u912746025_galvarezm4';      // <-- cambia
+$db_pass = 'Memo91am';     // <-- cambia
 
 try {
     $pdo = new PDO("mysql:host=$db_host;dbname=$db_name;charset=utf8", $db_user, $db_pass);
@@ -80,7 +80,7 @@ try {
 // ══════════════════════════════════════════
 // OPCIÓN 2: ENVIAR EMAIL DE NOTIFICACIÓN
 // ══════════════════════════════════════════
-$to      = 'tu@email.com';  // <-- tu correo
+$to      = 'alvarezmg01@gmail.com';  // <-- tu correo
 $subject = "Nuevo contacto desde tu portfolio: $nombre";
 $body    = "
 Nombre: $nombre
